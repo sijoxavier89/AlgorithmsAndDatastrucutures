@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticeProblems.DP;
+using System;
 
 namespace Algorithms
 {
@@ -7,6 +8,9 @@ namespace Algorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            StringPermuations test = new StringPermuations();
+            test.PrintPermutations("sijo");
+
         }
     }
 }
