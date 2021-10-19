@@ -8,9 +8,11 @@ namespace Algorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            StringPermuations test = new StringPermuations();
-            test.PrintPermutations("sijo");
+            var test = new LongestPalindrom();
+            var result = test.LongestPalindrome("abasab");
 
+            Console.Write(result);
+            
         }
     }
 }

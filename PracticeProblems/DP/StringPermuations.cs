@@ -43,7 +43,7 @@ namespace PracticeProblems.DP
                 {
                     map[c] = count - 1;
                     Permutation(map, prefix + c, remaining-1, result);
-                    map[c] = count;
+                    map[c] = count; // reset the count after completeing iteration for a char
                 }
             }
         }
