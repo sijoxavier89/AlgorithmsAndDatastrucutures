@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Algorithms
 {
@@ -79,6 +75,43 @@ namespace Algorithms
             return n;
         }
 
+        public IEnumerable<string> Collect()
+        {
+            Queue<string> queue = new Queue<string>();
+            KeysWithPrefix(root, "", 0, queue);
+            return queue;
+        }
+
+        public IEnumerable<string> KeysWithPrefix(string prefix)
+        {
+            Queue<string> queue = new Queue<string>();
+
+            Node x = Get(root, prefix, 0);
+
+            KeysWithPrefix(x, prefix, 0, queue);
+
+            return queue;
+        }
+
+        private void KeysWithPrefix(Node x, string prefix, int d, Queue<string> queue)
+        {
+            if(x == null)
+            {
+                return;
+            }
+
+            if(x.value != null)
+            {
+                queue.Enqueue(prefix);
+            }
+
+            char c = prefix[d];
+
+            for(int i =0; i < R; i++)
+            {
+                KeysWithPrefix(x.next[c], prefix + c, d + 1, queue);
+            }
+        }
         
     }
 }
