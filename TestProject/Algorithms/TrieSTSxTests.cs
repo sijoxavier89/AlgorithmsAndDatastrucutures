@@ -15,10 +15,10 @@ namespace TestProject.Algorithms
         public TrieSTSxTests()
         {
             trieSTsx = new TrieSTSx<int>();
+            Initialize();
         }
 
-        [Fact]
-        public void Get_Returns_value()
+        private void Initialize()
         {
             // Arrange
             var keys = new string[]
@@ -29,24 +29,40 @@ namespace TestProject.Algorithms
                 "shells",
                 "by",
                 "the",
-                "sea"
+                "shore"
             };
 
             // Act
-            int value = 0;
-            foreach(string s in keys)
+            int value = 1;
+            foreach (string s in keys)
             {
                 trieSTsx.Put(s, value);
-                value ++;
+                value++;
             }
 
+        }
+
+        [Fact]
+        public void Get_Returns_value()
+        {
+           
             var size = trieSTsx.Size();
 
             var valueResult = trieSTsx.Get("the");
 
             // Assert
             Assert.Equal(7, size);
-            Assert.Equal(5, valueResult);
+            Assert.Equal(6, valueResult);
+        }
+
+        [Fact]
+        public void Collect_ReturnAllKeys()
+        {
+            var keys = trieSTsx.Collect().ToList();
+
+            int count = keys.Count;
+
+            Assert.Equal(7, count);
         }
     }
 }

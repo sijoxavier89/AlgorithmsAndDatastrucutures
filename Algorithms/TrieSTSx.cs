@@ -14,7 +14,7 @@ namespace Algorithms
         private int n;
         class Node
         {
-            public T value;
+            public object value;
             public Node[] next;
 
             public Node()
@@ -38,7 +38,7 @@ namespace Algorithms
             // node // setting to previous node.next = x
             if(d == key.Length)
             {
-                x.value = value;
+                x.value = (T)value;
                 n = n + 1;
                 return x;
             }
@@ -52,7 +52,7 @@ namespace Algorithms
         {
             var x = Get(root, key, 0);
             if (x == null) return default;
-            return x.value;
+            return (T)x.value;
         }
 
         private Node Get(Node x, string key, int d)
@@ -78,7 +78,7 @@ namespace Algorithms
         public IEnumerable<string> Collect()
         {
             Queue<string> queue = new Queue<string>();
-            KeysWithPrefix(root, "", 0, queue);
+            Collect(root, "", queue);
             return queue;
         }
 
@@ -88,12 +88,12 @@ namespace Algorithms
 
             Node x = Get(root, prefix, 0);
 
-            KeysWithPrefix(x, prefix, 0, queue);
+            Collect(x, prefix, queue);
 
             return queue;
         }
 
-        private void KeysWithPrefix(Node x, string prefix, int d, Queue<string> queue)
+        private void Collect(Node x, string prefix, Queue<string> queue)
         {
             if(x == null)
             {
@@ -105,11 +105,9 @@ namespace Algorithms
                 queue.Enqueue(prefix);
             }
 
-            char c = prefix[d];
-
-            for(int i =0; i < R; i++)
+            for(char c = '0'; c < R; c++)
             {
-                KeysWithPrefix(x.next[c], prefix + c, d + 1, queue);
+                Collect(x.next[c], prefix + c, queue);
             }
         }
         
