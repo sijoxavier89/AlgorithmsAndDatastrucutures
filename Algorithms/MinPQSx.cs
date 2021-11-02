@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Algorithms
 {
@@ -47,6 +43,7 @@ namespace Algorithms
         {
             while (k > 1 && Less(k, k / 2))
             {
+                Exch(k, k / 2);
                  k = k / 2;
             }
         }
@@ -60,7 +57,7 @@ namespace Algorithms
 
                 int j = 2 * k;
 
-                if (Less(j, j + 1)) j++;
+                if (j < N && !Less(j, j + 1)) j++;
 
                 if (Less(k, j)) break;
 
