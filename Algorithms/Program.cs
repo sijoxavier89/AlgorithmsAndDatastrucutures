@@ -1,5 +1,4 @@
-﻿using PracticeProblems.DP;
-using System;
+﻿using System;
 
 namespace Algorithms
 {
@@ -8,10 +7,10 @@ namespace Algorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var test = new LongestPalindrom();
-            var result = test.LongestPalindrome("abasab");
+           // var test = new LongestPalindrom();
+           //  var result = test.LongestPalindrome("abasab");
 
-            Console.Write(result);
+           // Console.Write(result);
             
         }
     }

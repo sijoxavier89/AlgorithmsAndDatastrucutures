@@ -9,13 +9,13 @@ namespace Algorithms
         public MinPQSx(int maxSize)
         {
             pq = new T[maxSize + 1];
+            N = 0;
         }
 
         public void Insert(T key)
         {
-            N++;
-
-            pq[N] = key;
+           
+            pq[++N] = key;
             Swim(N);
 
         }
@@ -23,10 +23,10 @@ namespace Algorithms
         public T DeleteMin()
         {
             var min = pq[1];
-            pq[1] = pq[N--];
+            Exch(1, N--);
 
             Sink(1);
-
+            pq[N + 1] = default;
             return min;
         }
 
@@ -43,7 +43,7 @@ namespace Algorithms
         {
             while (k > 1 && Less(k, k / 2))
             {
-                Exch(k, k / 2);
+                Exch(k/2, k);
                  k = k / 2;
             }
         }

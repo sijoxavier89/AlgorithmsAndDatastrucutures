@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31229.75
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms.csproj", "{5603690F-27F0-4C16-BB28-84317FD7F10A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeProblems", "..\PracticeProblems\PracticeProblems.csproj", "{657E82E1-B875-4423-9071-55B6F3E2959F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "..\TestProject\TestProject.csproj", "{B9EC88C3-2364-401D-87C4-58E8C085DAE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreedyAndDynamicIlluminated", "..\GreedyAndDynamicIlluminated\GreedyAndDynamicIlluminated.csproj", "{3C0C98F2-4FB9-461B-AF01-59C8D21E6FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreedyAndDynamicIlluminated.Tests", "..\GreedyAndDynamicIlluminated.Tests\GreedyAndDynamicIlluminated.Tests.csproj", "{41831943-5406-4282-B348-A043047BC738}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{B9EC88C3-2364-401D-87C4-58E8C085DAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9EC88C3-2364-401D-87C4-58E8C085DAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9EC88C3-2364-401D-87C4-58E8C085DAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0C98F2-4FB9-461B-AF01-59C8D21E6FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0C98F2-4FB9-461B-AF01-59C8D21E6FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0C98F2-4FB9-461B-AF01-59C8D21E6FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0C98F2-4FB9-461B-AF01-59C8D21E6FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41831943-5406-4282-B348-A043047BC738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41831943-5406-4282-B348-A043047BC738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41831943-5406-4282-B348-A043047BC738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41831943-5406-4282-B348-A043047BC738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
