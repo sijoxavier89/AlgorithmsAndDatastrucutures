@@ -17,9 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CtCi.Moderate.Problems", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CtCi.Moderate.Problems.Tests", "..\CtCi.Moderate.Problems.Tests\CtCi.Moderate.Problems.Tests.csproj", "{C9D118AF-92D2-41C4-8D45-09675801E884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CtCi.Hard.Problems", "..\CtCi.Hard.Problems\CtCi.Hard.Problems.csproj", "{A5D4BD3C-DC6F-4A3A-BB21-914D6F7B3774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CtCi.Hard.Problems", "..\CtCi.Hard.Problems\CtCi.Hard.Problems.csproj", "{A5D4BD3C-DC6F-4A3A-BB21-914D6F7B3774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CtCi.Hard.Problems.Tests", "..\CtCi.Hard.Problems.Tests\CtCi.Hard.Problems.Tests.csproj", "{721E593B-7D22-41FF-98E3-65534E0A04AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CtCi.Hard.Problems.Tests", "..\CtCi.Hard.Problems.Tests\CtCi.Hard.Problems.Tests.csproj", "{721E593B-7D22-41FF-98E3-65534E0A04AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FCC", "FCC", "{E4A71C18-E864-4588-9D22-EAFDD476AEE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "..\DynamicProgramming\DynamicProgramming.csproj", "{796B89D6-5B40-4474-9E00-CA5988AB4F4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,9 +67,16 @@ Global
 		{721E593B-7D22-41FF-98E3-65534E0A04AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{721E593B-7D22-41FF-98E3-65534E0A04AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{721E593B-7D22-41FF-98E3-65534E0A04AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{796B89D6-5B40-4474-9E00-CA5988AB4F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{796B89D6-5B40-4474-9E00-CA5988AB4F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{796B89D6-5B40-4474-9E00-CA5988AB4F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{796B89D6-5B40-4474-9E00-CA5988AB4F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{796B89D6-5B40-4474-9E00-CA5988AB4F4A} = {E4A71C18-E864-4588-9D22-EAFDD476AEE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36D83E4C-7413-4483-AF0C-1D8846A16980}
