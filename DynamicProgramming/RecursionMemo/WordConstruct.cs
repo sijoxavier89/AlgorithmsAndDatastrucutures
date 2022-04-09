@@ -48,7 +48,7 @@ namespace DynamicProgramming.RecursionMemo
             return best;
         }
 
-        private static IEnumerable<IList<string>> AllConstruct(string target, string[] wordDict, Dictionary<string, List<List<string>>> map = null)
+        public static IEnumerable<IList<string>> AllConstruct(string target, string[] wordDict, Dictionary<string, List<List<string>>> map = null)
         {
             if (map != null && map.ContainsKey(target))
             {
@@ -71,7 +71,9 @@ namespace DynamicProgramming.RecursionMemo
                     string newTarget = target.Substring(word.Length);
 
                     subList = (List<List<string>>)AllConstruct(newTarget, wordDict, map);
-                    AddToSubList(subList, word);
+                   
+                    if(subList.Count > 0)
+                    subList[0].Add(word);
                     if (subList.Count > 0)
                         final.Add(subList[0]);
                 }
@@ -88,15 +90,7 @@ namespace DynamicProgramming.RecursionMemo
             return final;
         }
 
-        private static void AddToSubList(List<List<string>> subList, string word)
-        {
-            foreach (var entry in subList)
-            {
-                entry.Add(word);
-            }
-        }
-
-
+       
 
     }
 }
