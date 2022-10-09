@@ -67,7 +67,29 @@ namespace PracticeProblems.Graph
            return edges;
         }
 
+        /// <summary>
+        /// Return all vertices
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<int> Vertices()
+        {
+            HashSet<int> list = new HashSet<int>();
 
+            foreach(int v in adj.Keys)
+            {
+                list.Add(v);
+                foreach (int w in adj[v])
+                {
+                    if (!list.Contains(w))
+                    {
+                        list.Add(w);
+                    }
+                }
+            }
+
+            return list;
+        }
+        
         public void AddEdge(int v, int w)
         {
 
@@ -101,7 +123,9 @@ namespace PracticeProblems.Graph
         /// <exception cref="NotImplementedException"></exception>
         public IEnumerable<int> Adj(int v)
         {
-            return adj[v];
+            if (adj.TryGetValue(v, out List<int> list))
+                return list;
+            return new List<int>();
         }
 
         /// <summary>

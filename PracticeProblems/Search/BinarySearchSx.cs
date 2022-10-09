@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PracticeProblems.Search
+﻿namespace PracticeProblems.Search
 {
-   public  class BinarySearchSx 
+    public  class BinarySearchSx 
    {
         int[] arr;
         public BinarySearchSx(int[] arr)
